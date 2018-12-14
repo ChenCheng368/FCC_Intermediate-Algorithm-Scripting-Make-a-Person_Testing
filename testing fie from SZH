@@ -1,0 +1,64 @@
+var Person = function(firstAndLast) {
+  // Complete the method below and implement the others similarly
+  var _firstAndLast = firstAndLast;
+  var _first = "A";
+  this.getFullName = function() {
+    return _firstAndLast;
+  };
+  this.setFullName = function(firstAndLast) {
+    _firstAndLast = firstAndLast;
+    return _firstAndLast;
+  }
+  return firstAndLast;
+};
+
+function Class(b){
+  var key = 'aa';
+  this.key2 = 'bb';
+  this.toString = function() {
+    return this.key2=key;
+  }
+  this.showKey = function() {
+    return key;
+  }
+  this.changeKey = function(b) {
+    key = b;
+  }
+  return 'aa';
+}
+
+//var c = a('aaaa');
+//console.log(c);
+var instance = new Class;
+console.log('--------------------')
+console.log(instance.showKey());
+console.log(instance.key);
+instance.changeKey('new key');
+console.log(instance.showKey());
+/*console.log('--------------------')
+instance.key = 'ttt';
+console.log(instance.showKey());
+console.log(instance.key);*/
+console.log('--------------------')
+Class.prototype.key = 'vvv';
+console.log(instance.showKey());
+console.log(instance.key);
+instance.changeKey('new key 2');
+console.log(instance.showKey());
+console.log('--------------------')
+instance.key = '888'
+console.log(instance.showKey());
+console.log(instance.key);
+/*
+var bb = new a;
+bb.key2 = 'bbb';
+console.log(aa.key2);
+console.log(bb.key2);
+/*var bob = new Person('Bob Ross');
+console.log(Object.keys(bob).length);
+console.log(bob.getFullName());
+
+bob.setFullName('sha bi')
+console.log(Object.keys(bob).length);
+console.log(bob.getFullName());
+console.log(Object.getPrototypeOf(bob));*/
